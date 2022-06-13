@@ -6,6 +6,11 @@ public struct InventoryItem
     private string _name;
     private string _description;
 
+    public string GetName()
+    {
+        return _name;
+    }
+
     public void SetItem(Item item)
     {
         _sprite = item.ItemSprite;

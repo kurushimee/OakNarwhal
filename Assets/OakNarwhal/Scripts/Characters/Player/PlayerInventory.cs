@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     private static InventoryItem[] _inventorySlots;
+    private static InventoryItem _itemInHand;
     [SerializeField] private int slotsCount;
 
     private void Awake()
@@ -20,10 +21,21 @@ public class PlayerInventory : MonoBehaviour
 
             slot.SetItem(item);
             _inventorySlots[i] = slot;
+            SetItemToHand(0);
             return true;
         }
 
         return false;
+    }
+
+    public static InventoryItem GetItemInHand()
+    {
+        return _itemInHand;
+    }
+
+    public static void SetItemToHand(int id)
+    {
+        _itemInHand = GetItemFromInventory(id);
     }
 
     public static InventoryItem GetItemFromInventory(int slot)
