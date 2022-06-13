@@ -2,9 +2,9 @@ using UnityEngine;
 
 public struct InventoryItem
 {
-    [SerializeField] private Sprite _sprite;
-    [SerializeField] private string _name;
-    [SerializeField] private string _description;
+    private Sprite _sprite;
+    private string _name;
+    private string _description;
 
     public void SetItem(Item item)
     {
@@ -22,14 +22,14 @@ public struct InventoryItem
 
     public bool IsEmpty()
     {
-        bool isSpriteEmpty = false;
-        bool isNameEmpty = false;
-        bool isDescriptionEmpty = false;
-        bool isEmpty = false;
+        var isSpriteEmpty = false;
+        var isNameEmpty = false;
+        var isDescriptionEmpty = false;
+        var isEmpty = false;
 
         if (_sprite == null) isSpriteEmpty = true;
-        if (_name == null || _name == "") isNameEmpty = true;
-        if (_description == null || _description == "") isDescriptionEmpty = true;
+        if (string.IsNullOrEmpty(_name)) isNameEmpty = true;
+        if (string.IsNullOrEmpty(_description)) isDescriptionEmpty = true;
         if (isSpriteEmpty && isNameEmpty && isDescriptionEmpty) isEmpty = true;
 
         return isEmpty;

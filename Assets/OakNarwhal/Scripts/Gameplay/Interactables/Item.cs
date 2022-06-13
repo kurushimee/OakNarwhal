@@ -3,35 +3,30 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class Item : Interactable
 {
-    public Sprite ItemSprite { get { return _sprite; } }
-    public string ItemName { get {return _name; } }
-
-
-    [SerializeField] private Sprite _sprite = null;
-    [SerializeField] private string _name = "Item";
-    [SerializeField] private string _description = "Description";
-
-    public override void Interact()
-    {
-        if(PlayerInventory.TryAddItemToInventory(this))
-        {
-            OnPickedUp();
-        }
-    }
-
-    public override string GetDescription()
-    {
-        return _description;
-    }
+    [SerializeField] private Sprite sprite;
+    [SerializeField] private string mName = "Item";
+    [SerializeField] private string description = "Description";
+    public Sprite ItemSprite => sprite;
+    public string ItemName => mName;
 
     private void OnValidate()
     {
         UpdateItem();
     }
 
+    public override void Interact()
+    {
+        if (PlayerInventory.TryAddItemToInventory(this)) OnPickedUp();
+    }
+
+    public override string GetDescription()
+    {
+        return description;
+    }
+
     private void UpdateItem()
     {
-        GetComponent<SpriteRenderer>().sprite = _sprite;
+        GetComponent<SpriteRenderer>().sprite = sprite;
     }
 
     private void OnPickedUp()
