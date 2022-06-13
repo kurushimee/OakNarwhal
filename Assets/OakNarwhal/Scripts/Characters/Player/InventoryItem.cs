@@ -1,20 +1,31 @@
 using UnityEngine;
 
+[System.Serializable]
 public struct InventoryItem
 {
-    private Sprite _sprite;
-    private string _name;
-    private string _description;
+    [SerializeField] private Sprite _sprite;
+    [SerializeField] private string _name;
+    [SerializeField] private string _description;
+
+    public Sprite GetSprite()
+    {
+        return _sprite;
+    }
 
     public string GetName()
     {
         return _name;
     }
 
-    public void SetItem(Item item)
+    public string GetDescription()
     {
-        _sprite = item.ItemSprite;
-        _name = item.ItemName;
+        return _description;
+    }
+
+    public void SetItem(InventoryItem item)
+    {
+        _sprite = item.GetSprite();
+        _name = item.GetName();
         _description = item.GetDescription();
     }
 

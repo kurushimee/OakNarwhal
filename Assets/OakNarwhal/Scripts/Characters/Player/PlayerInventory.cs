@@ -19,9 +19,9 @@ public class PlayerInventory : MonoBehaviour
 
             if (!slot.IsEmpty()) continue;
 
-            slot.SetItem(item);
+            slot.SetItem(item.GetItem());
             _inventorySlots[i] = slot;
-            SetItemToHand(0);
+            SetItemToHand(0); //to remove
             return true;
         }
 

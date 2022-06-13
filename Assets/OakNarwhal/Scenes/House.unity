@@ -965,6 +965,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -697783495680777314, guid: 0a00da7f0f4dfa04d95b3d7ec4d363a1, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -697783495680777314, guid: 0a00da7f0f4dfa04d95b3d7ec4d363a1, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -697783495680777314, guid: 0a00da7f0f4dfa04d95b3d7ec4d363a1, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -697783495680777314, guid: 0a00da7f0f4dfa04d95b3d7ec4d363a1, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -697783495680777314, guid: 0a00da7f0f4dfa04d95b3d7ec4d363a1, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -697783495680777314, guid: 0a00da7f0f4dfa04d95b3d7ec4d363a1, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -697783495680777314, guid: 0a00da7f0f4dfa04d95b3d7ec4d363a1, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1553166567187242384, guid: 0a00da7f0f4dfa04d95b3d7ec4d363a1, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1041,6 +1069,14 @@ PrefabInstance:
       propertyPath: sprite
       value: 
       objectReference: {fileID: 7482667652216324306, guid: 553c5e6effecdd34fb816694d12138ce, type: 3}
+    - target: {fileID: 8233648431965199791, guid: 0a00da7f0f4dfa04d95b3d7ec4d363a1, type: 3}
+      propertyPath: _sprite
+      value: 
+      objectReference: {fileID: 7482667652216324306, guid: 553c5e6effecdd34fb816694d12138ce, type: 3}
+    - target: {fileID: 8233648431965199791, guid: 0a00da7f0f4dfa04d95b3d7ec4d363a1, type: 3}
+      propertyPath: _item._name
+      value: Key
+      objectReference: {fileID: 0}
     - target: {fileID: 8233648431965199791, guid: 0a00da7f0f4dfa04d95b3d7ec4d363a1, type: 3}
       propertyPath: description
       value: Unlocks different objects

@@ -3,16 +3,9 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class Item : Interactable
 {
-    [SerializeField] private Sprite sprite;
-    [SerializeField] private string mName = "Item";
-    [SerializeField] private string description = "Description";
-    public Sprite ItemSprite => sprite;
-    public string ItemName => mName;
-
-    private void OnValidate()
-    {
-        UpdateItem();
-    }
+    [SerializeField] private Sprite _sprite = null;
+    [SerializeField] private string _description = "Description";
+    [SerializeField] private InventoryItem _item;
 
     public override void Interact()
     {
@@ -21,12 +14,22 @@ public class Item : Interactable
 
     public override string GetDescription()
     {
-        return description;
+        return _description;
+    }
+
+    public InventoryItem GetItem()
+    {
+        return _item;
+    }
+
+    private void OnValidate()
+    {
+        UpdateItem();
     }
 
     private void UpdateItem()
     {
-        GetComponent<SpriteRenderer>().sprite = sprite;
+        GetComponent<SpriteRenderer>().sprite = _sprite;
     }
 
     private void OnPickedUp()
