@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4519f2021132c1c418c217480958977b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionDistance: 100
+  interactionDistance: 5
   interactionText: {fileID: 0}
   interactionHoldGo: {fileID: 0}
   interactionHoldProgress: {fileID: 0}
@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611af1e797e33754eb4e078bdf271502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slotsCount: 0
 --- !u!1 &4313330616697034952
 GameObject:
   m_ObjectHideFlags: 0
