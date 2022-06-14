@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 6106003933620714878}
   - component: {fileID: 156361475}
   - component: {fileID: 156361476}
+  - component: {fileID: 420383703}
+  - component: {fileID: 7033806985417501166}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -126,7 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611af1e797e33754eb4e078bdf271502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotsCount: 3
+  _inventoryUI: {fileID: 0}
+  _slotsCount: 3
 --- !u!212 &156361475
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -199,3 +202,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &420383703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4313330616077320552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eeaf781b2549a04e9d18a36f7aac500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7033806985417501166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4313330616077320552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eeaf781b2549a04e9d18a36f7aac500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
