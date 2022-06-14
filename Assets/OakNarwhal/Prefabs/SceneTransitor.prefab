@@ -100,9 +100,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionType: 0
-  _requiredItem: 
+  _requiredItems:
+  - 
   _description: Press [E] to go to the Narnia
-  _unlockedOnce: 1
+  OnStageChanged:
+    m_PersistentCalls:
+      m_Calls: []
   OnActivate:
     m_PersistentCalls:
       m_Calls:

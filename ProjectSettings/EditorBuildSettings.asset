@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/OakNarwhal/Scenes/Sawmill.unity
     guid: d73997a509ddace47a8dd81f6fc0e941
   - enabled: 1
+    path: Assets/OakNarwhal/Scenes/Roof.unity
+    guid: d6fb90c81478d274ba51ac578bb0edfb
+  - enabled: 1
     path: Assets/OakNarwhal/Scenes/Cellar.unity
     guid: 1b5b5fb2e3131d5478f8a1b3c81c9fa7
   m_configObjects: {}

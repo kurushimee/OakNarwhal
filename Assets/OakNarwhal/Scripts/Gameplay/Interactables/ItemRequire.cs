@@ -3,17 +3,24 @@ using UnityEngine.Events;
 
 public class ItemRequire : Interactable
 {
-    [SerializeField] private string _requiredItem;
+    [SerializeField] private string[] _requiredItems;
     [SerializeField] private string _description;
-    [SerializeField] bool _unlockedOnce = true;
 
+    public UnityEvent OnStageChanged;
     public UnityEvent OnActivate;
 
+    private int _stage = 0;
     private bool _unlocked = false;
 
     public override void Interact()
     {
-        if(IsAvalaible())
+        if (!_unlocked)
+        {
+            CheckStage();
+            CheckAvalaible();
+        }
+
+        if(_unlocked)
         {
             OnActivate.Invoke();
         }
@@ -24,17 +31,19 @@ public class ItemRequire : Interactable
         return _description;
     }
 
-    private bool IsAvalaible()
+    private void CheckStage()
     {
-        if (_unlocked) return true;
-        if (_requiredItem == "" || PlayerInventory.GetItemInHand().GetName() == _requiredItem)
+        string requireItem = _requiredItems[_stage];
+        if (requireItem == "" || PlayerInventory.GetItemInHand().GetName() == requireItem)
         {
-            if(_unlockedOnce)
-            {
-                _unlocked = true;
-            }
-            return true;
+            _stage++;
+            OnStageChanged.Invoke();
+            CheckAvalaible();
         }
-        return false;
+    }
+
+    private void CheckAvalaible()
+    {
+        if (_stage == _requiredItems.Length) _unlocked = true;
     }
 }
