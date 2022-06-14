@@ -8,11 +8,6 @@ public class ItemDrawer : MonoBehaviour
     [SerializeField] private TMP_Text _nameDisplay;
     [SerializeField] private TMP_Text _descriptionDisplay;
 
-    private ItemDrawer()
-    {
-        PlayerInventory.OnHandItemChanged += DrawHandItem;
-    }
-
     public void DrawHandItem()
     {
         InventoryItem item = PlayerInventory.GetItemInHand();
@@ -24,5 +19,10 @@ public class ItemDrawer : MonoBehaviour
         _iconDisplay.sprite = item.GetSprite();
         _nameDisplay.text = item.GetName();
         _descriptionDisplay.text = item.GetDescription();
+    }
+
+    private void Awake()
+    {
+        PlayerInventory.OnHandItemChanged += DrawHandItem;
     }
 }
