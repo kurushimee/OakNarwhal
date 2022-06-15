@@ -3,26 +3,26 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransitor : MonoBehaviour
 {
-    [SerializeField] private int _sceneID = 0;
-    [SerializeField] private bool _unlocked = true;
+    [SerializeField] private int sceneID;
+    [SerializeField] private bool unlocked = true;
 
-    public bool IsAvalaible()
+    public bool IsAvailable()
     {
-        return _unlocked;
+        return unlocked;
     }
 
     public void LoadScene()
     {
-        SceneManager.LoadScene(_sceneID);
+        SceneManager.LoadScene(sceneID);
     }
 
     public void Lock()
     {
-        _unlocked = false;
+        unlocked = false;
     }
 
     public void Unlock()
     {
-        _unlocked = true;
+        unlocked = true;
     }
 }

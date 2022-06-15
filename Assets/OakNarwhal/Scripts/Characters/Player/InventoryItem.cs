@@ -1,39 +1,40 @@
+using System;
 using UnityEngine;
 
-[System.Serializable]
+[Serializable]
 public struct InventoryItem
 {
-    [SerializeField] private Sprite _sprite;
-    [SerializeField] private string _name;
-    [SerializeField] private string _description;
+    [SerializeField] private Sprite sprite;
+    [SerializeField] private string name;
+    [SerializeField] private string description;
 
     public Sprite GetSprite()
     {
-        return _sprite;
+        return sprite;
     }
 
     public string GetName()
     {
-        return _name;
+        return name;
     }
 
     public string GetDescription()
     {
-        return _description;
+        return description;
     }
 
     public void SetItem(InventoryItem item)
     {
-        _sprite = item.GetSprite();
-        _name = item.GetName();
-        _description = item.GetDescription();
+        sprite = item.GetSprite();
+        name = item.GetName();
+        description = item.GetDescription();
     }
 
     public void Clear()
     {
-        _sprite = null;
-        _name = "";
-        _description = "";
+        sprite = null;
+        name = "";
+        description = "";
     }
 
     public bool IsEmpty()
@@ -43,9 +44,9 @@ public struct InventoryItem
         var isDescriptionEmpty = false;
         var isEmpty = false;
 
-        if (_sprite == null) isSpriteEmpty = true;
-        if (string.IsNullOrEmpty(_name)) isNameEmpty = true;
-        if (string.IsNullOrEmpty(_description)) isDescriptionEmpty = true;
+        if (sprite == null) isSpriteEmpty = true;
+        if (string.IsNullOrEmpty(name)) isNameEmpty = true;
+        if (string.IsNullOrEmpty(description)) isDescriptionEmpty = true;
         if (isSpriteEmpty && isNameEmpty && isDescriptionEmpty) isEmpty = true;
 
         return isEmpty;

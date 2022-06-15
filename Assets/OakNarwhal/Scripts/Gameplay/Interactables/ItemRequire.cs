@@ -3,47 +3,42 @@ using UnityEngine.Events;
 
 public class ItemRequire : Interactable
 {
-    [SerializeField] private string[] _requiredItems;
-    [SerializeField] private string _description;
+    [SerializeField] private string[] requiredItems;
+    [SerializeField] private string description;
 
-    public UnityEvent OnStageChanged;
-    public UnityEvent OnActivate;
+    public UnityEvent onStageChanged;
+    public UnityEvent onActivate;
 
-    private int _stage = 0;
-    private bool _unlocked = false;
+    private int _stage;
+    private bool _unlocked;
 
     public override void Interact()
     {
         if (!_unlocked)
         {
             CheckStage();
-            CheckAvalaible();
+            CheckAvailable();
         }
 
-        if(_unlocked)
-        {
-            OnActivate.Invoke();
-        }
+        if (_unlocked) onActivate.Invoke();
     }
 
     public override string GetDescription()
     {
-        return _description;
+        return description;
     }
 
     private void CheckStage()
     {
-        string requireItem = _requiredItems[_stage];
-        if (requireItem == "" || PlayerInventory.GetItemInHand().GetName() == requireItem)
-        {
-            _stage++;
-            OnStageChanged.Invoke();
-            CheckAvalaible();
-        }
+        var requireItem = requiredItems[_stage];
+        if (requireItem != "" && PlayerInventory.GetItemInHand().GetName() != requireItem) return;
+        _stage++;
+        onStageChanged.Invoke();
+        CheckAvailable();
     }
 
-    private void CheckAvalaible()
+    private void CheckAvailable()
     {
-        if (_stage == _requiredItems.Length) _unlocked = true;
+        if (_stage == requiredItems.Length) _unlocked = true;
     }
 }

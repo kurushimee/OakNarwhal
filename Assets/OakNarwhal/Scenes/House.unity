@@ -601,10 +601,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6106003933620714878, guid: 8b71773a6572ee14db072f4c1963ea04, type: 3}
-      propertyPath: _inventoryUI
-      value: 
-      objectReference: {fileID: 357858438}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b71773a6572ee14db072f4c1963ea04, type: 3}
 --- !u!4 &156361474 stripped
@@ -1472,7 +1468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba7892039180184eb5a3fc441b0bbd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemSlot: {fileID: 6609909785977621050, guid: 0ee51bc8d84dd304c9ffa2cb2e5a0b54, type: 3}
+  itemSlot: {fileID: 0}
 --- !u!1 &755775956
 GameObject:
   m_ObjectHideFlags: 0
@@ -8110,6 +8106,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2757699185202551095, guid: d27813097c38e4f49ab4ebf5c1b4f99b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: adc0633011235e2429fd44da31d59804, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d27813097c38e4f49ab4ebf5c1b4f99b, type: 3}
 --- !u!4 &1744049715 stripped

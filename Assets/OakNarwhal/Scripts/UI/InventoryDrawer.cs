@@ -2,32 +2,29 @@ using UnityEngine;
 
 public class InventoryDrawer : MonoBehaviour
 {
-    [SerializeField] private ItemChooser _itemSlot = null;
+    [SerializeField] private ItemChooser itemSlot;
 
-    public void DisplayInventory()
+    private void Awake()
     {
-        int slotsCount = PlayerInventory.GetSlotsCount();
-        
+        PlayerInventory.OnInventoryOpen += DisplayInventory;
+    }
+
+    private void DisplayInventory()
+    {
+        var slotsCount = PlayerInventory.GetSlotsCount();
+
         ClearGrid();
 
-        for(int i = 0; i < slotsCount; i++)
+        for (var i = 0; i < slotsCount; i++)
         {
-            ItemChooser itemSlot = Instantiate(_itemSlot, transform);
-            itemSlot.id = i;
-            itemSlot.DrawItem();
+            var newItemSlot = Instantiate(itemSlot, transform);
+            newItemSlot.id = i;
+            newItemSlot.DrawItem();
         }
     }
 
     private void ClearGrid()
     {
-        foreach(Transform child in transform)
-        {
-            Destroy(child.gameObject);
-        }
-    }
-
-    private void Awake()
-    {
-        PlayerInventory.OnInventoryOpen += DisplayInventory;
+        foreach (Transform child in transform) Destroy(child.gameObject);
     }
 }

@@ -7,4 +7,3 @@ public class SelfDisable : MonoBehaviour
         gameObject.SetActive(false);
     }
 }
-
