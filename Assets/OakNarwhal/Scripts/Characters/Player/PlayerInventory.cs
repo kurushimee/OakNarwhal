@@ -57,10 +57,11 @@ public class PlayerInventory : MonoBehaviour
         return _inventorySlots.Length;
     }
 
-    public void ActivateInventory(InputAction.CallbackContext context)
+    public void OnInventory(InputAction.CallbackContext context)
     {
-        if (!_inventoryOpen) OnInventoryOpen?.Invoke();
+        if (!context.performed) return;
         inventoryUI.SetActive(!_inventoryOpen);
+        if (!_inventoryOpen) OnInventoryOpen?.Invoke();
         _inventoryOpen = !_inventoryOpen;
     }
 }
