@@ -24,7 +24,7 @@ public class ItemRequire : Interactable
 
     private void CheckStage()
     {
-        var requireItem = requiredItems[_stage];
+        string requireItem = requiredItems[_stage];
         if (requireItem != "" && PlayerInventory.GetItemInHand().GetName() != requireItem) return;
         _stage++;
         onStageChanged.Invoke();
