@@ -4,7 +4,6 @@ using UnityEngine;
 public class Item : Interactable
 {
     [SerializeField] private Sprite sprite;
-    [SerializeField] private string description = "Description";
     [SerializeField] private InventoryItem item;
 
     private void OnValidate()
