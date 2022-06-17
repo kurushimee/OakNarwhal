@@ -100,13 +100,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionType: 0
-  _requiredItems:
+  requiredItems:
   - 
-  _description: Press [E] to go to the Narnia
-  OnStageChanged:
+  onStageChanged:
     m_PersistentCalls:
       m_Calls: []
-  OnActivate:
+  onActivate:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2241691044272823479}
@@ -133,8 +132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 504e2e4f3c89e1a4490823c63a478cd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneID: 6
-  _unlocked: 1
+  sceneID: 0
+  unlocked: 1
 --- !u!61 &-3416093763131538521
 BoxCollider2D:
   m_ObjectHideFlags: 0

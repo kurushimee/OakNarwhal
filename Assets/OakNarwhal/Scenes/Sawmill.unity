@@ -301,13 +301,25 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6442660851372604610, guid: 48a36c017205e0244a5351c9b40066df, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 11772af18ff7cc549b1a34d6bb295668, type: 3}
+    - target: {fileID: 6442660851372604610, guid: 48a36c017205e0244a5351c9b40066df, type: 3}
       propertyPath: _sprite
       value: 
       objectReference: {fileID: 21300000, guid: 11772af18ff7cc549b1a34d6bb295668, type: 3}
     - target: {fileID: 6442660851372604610, guid: 48a36c017205e0244a5351c9b40066df, type: 3}
+      propertyPath: item.name
+      value: Plank
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442660851372604610, guid: 48a36c017205e0244a5351c9b40066df, type: 3}
       propertyPath: _item._name
       value: Plank
       objectReference: {fileID: 0}
+    - target: {fileID: 6442660851372604610, guid: 48a36c017205e0244a5351c9b40066df, type: 3}
+      propertyPath: item.sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 11772af18ff7cc549b1a34d6bb295668, type: 3}
     - target: {fileID: 6442660851372604610, guid: 48a36c017205e0244a5351c9b40066df, type: 3}
       propertyPath: _description
       value: Plank
@@ -317,15 +329,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 11772af18ff7cc549b1a34d6bb295668, type: 3}
     - target: {fileID: 6442660851372604610, guid: 48a36c017205e0244a5351c9b40066df, type: 3}
+      propertyPath: item.description
+      value: Processed log
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442660851372604610, guid: 48a36c017205e0244a5351c9b40066df, type: 3}
       propertyPath: _item._description
       value: Just a plank
       objectReference: {fileID: 0}
     - target: {fileID: 8615493014501371063, guid: 48a36c017205e0244a5351c9b40066df, type: 3}
       propertyPath: m_Name
-      value: UnlockableItem
+      value: Plank
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48a36c017205e0244a5351c9b40066df, type: 3}
+--- !u!1 &533994753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8615493014501371063, guid: 48a36c017205e0244a5351c9b40066df, type: 3}
+  m_PrefabInstance: {fileID: 533994752}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,8 +469,20 @@ PrefabInstance:
       value: Can proceed logs
       objectReference: {fileID: 0}
     - target: {fileID: 2757699185202551088, guid: d27813097c38e4f49ab4ebf5c1b4f99b, type: 3}
+      propertyPath: requiredItems.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757699185202551088, guid: d27813097c38e4f49ab4ebf5c1b4f99b, type: 3}
       propertyPath: _requiredItems.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757699185202551088, guid: d27813097c38e4f49ab4ebf5c1b4f99b, type: 3}
+      propertyPath: requiredItems.Array.data[0]
+      value: Generator
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757699185202551088, guid: d27813097c38e4f49ab4ebf5c1b4f99b, type: 3}
+      propertyPath: requiredItems.Array.data[1]
+      value: Log
       objectReference: {fileID: 0}
     - target: {fileID: 2757699185202551088, guid: d27813097c38e4f49ab4ebf5c1b4f99b, type: 3}
       propertyPath: _requiredItems.Array.data[0]
@@ -458,6 +491,22 @@ PrefabInstance:
     - target: {fileID: 2757699185202551088, guid: d27813097c38e4f49ab4ebf5c1b4f99b, type: 3}
       propertyPath: _requiredItems.Array.data[1]
       value: Log
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757699185202551088, guid: d27813097c38e4f49ab4ebf5c1b4f99b, type: 3}
+      propertyPath: onActivate.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757699185202551088, guid: d27813097c38e4f49ab4ebf5c1b4f99b, type: 3}
+      propertyPath: onActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757699185202551088, guid: d27813097c38e4f49ab4ebf5c1b4f99b, type: 3}
+      propertyPath: onActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 533994753}
+    - target: {fileID: 2757699185202551088, guid: d27813097c38e4f49ab4ebf5c1b4f99b, type: 3}
+      propertyPath: onActivate.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2757699185202551093, guid: d27813097c38e4f49ab4ebf5c1b4f99b, type: 3}
       propertyPath: m_Name
@@ -528,6 +577,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2241691044272823479, guid: c1382216adb01334b9fb7ad033c00391, type: 3}
+      propertyPath: sceneID
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2241691044272823479, guid: c1382216adb01334b9fb7ad033c00391, type: 3}
       propertyPath: _sceneID
       value: 3
