@@ -17,11 +17,6 @@ public class Item : Interactable
         if (PlayerInventory.TryAddItemToInventory(this)) OnPickedUp();
     }
 
-    public override string GetDescription()
-    {
-        return description;
-    }
-
     public InventoryItem GetItem()
     {
         return item;

@@ -4,7 +4,6 @@ using UnityEngine.Events;
 public class ItemRequire : Interactable
 {
     [SerializeField] private string[] requiredItems;
-    [SerializeField] private string description;
 
     public UnityEvent onStageChanged;
     public UnityEvent onActivate;
@@ -21,11 +20,6 @@ public class ItemRequire : Interactable
         }
 
         if (_unlocked) onActivate.Invoke();
-    }
-
-    public override string GetDescription()
-    {
-        return description;
     }
 
     private void CheckStage()
