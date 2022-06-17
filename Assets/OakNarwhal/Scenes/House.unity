@@ -2212,14 +2212,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basement
       objectReference: {fileID: 0}
-    - target: {fileID: 7562850174366043357, guid: c1382216adb01334b9fb7ad033c00391, type: 3}
-      propertyPath: requiredItems.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7562850174366043357, guid: c1382216adb01334b9fb7ad033c00391, type: 3}
-      propertyPath: requiredItems.Array.data[0]
-      value: ghui blyat syka
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1382216adb01334b9fb7ad033c00391, type: 3}
 --- !u!4 &338625880 stripped
