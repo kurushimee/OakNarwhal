@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":0.0,"y":0.0},"zoom":1.0,"elements":[],"$version":"A"}}'
-    _objectReferences: []
+    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":"Player","summary":"Connects
+      all the player components","pan":{"x":0.0,"y":0.0},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-290.0,"y":-50.0},"guid":"8f017945-85a2-4abf-acd0-79716cc43e89","$version":"A","$type":"Unity.VisualScripting.Start","$id":"9"},{"chainable":false,"member":{"name":"SetCursor","parameterTypes":["UnityEngine.Texture2D","UnityEngine.Vector2","UnityEngine.CursorMode"],"targetType":"UnityEngine.Cursor","targetTypeName":"UnityEngine.Cursor","$version":"A"},"defaultValues":{"%texture":{"$content":0,"$type":"UnityEngine.Object"},"%hotspot":{"x":0.0,"y":0.0,"$type":"UnityEngine.Vector2"},"%cursorMode":{"$content":"Auto","$type":"UnityEngine.CursorMode"}},"position":{"x":-112.0,"y":-50.0},"guid":"8355696e-d464-464e-b72f-481ab92be3d3","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"11"},{"sourceUnit":{"$ref":"9"},"sourceKey":"trigger","destinationUnit":{"$ref":"11"},"destinationKey":"enter","guid":"718457d8-7e6b-4c01-bb91-bf614783fc42","$type":"Unity.VisualScripting.ControlConnection"}],"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 2800000, guid: 7bbdaf6f4f3b7984badcb29ec8dbdbcb, type: 3}
