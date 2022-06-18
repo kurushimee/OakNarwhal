@@ -17,35 +17,6 @@ public class PlayerInteraction : MonoBehaviour
     public void OnInteract(InputAction.CallbackContext context)
     {
         if (!SearchInteractable(out var interactable)) return;
-        switch (interactable.interactionType)
-        {
-            // Handle click interaction
-            case Interactable.InteractionType.Click:
-                if (context.started) interactable.Interact();
-                break;
-
-            // Handle hold interaction
-            case Interactable.InteractionType.Hold:
-                if (context.performed)
-                {
-                    // If holding the interaction key, continue progress
-                    interactable.IncreaseHoldTime();
-                    if (interactable.GetHoldTime() >= 1f)
-                    {
-                        // If held long enough, interact
-                        interactable.Interact();
-                        interactable.ResetHoldTime();
-                    }
-                }
-                else if (context.canceled)
-                {
-                    interactable.ResetHoldTime();
-                }
-
-                break;
-
-            default:
-                throw new Exception("Unsupported type of interactable.");
-        }
+        if (context.performed) interactable.Interact();
     }
 }
