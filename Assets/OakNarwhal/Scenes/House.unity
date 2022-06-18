@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &9298297 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5276444623610682963, guid: c1382216adb01334b9fb7ad033c00391, type: 3}
+  m_PrefabInstance: {fileID: 338625879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &42040250 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2757699185202551093, guid: d27813097c38e4f49ab4ebf5c1b4f99b, type: 3}
@@ -1347,6 +1352,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2746213599166211523, guid: 8b71773a6572ee14db072f4c1963ea04, type: 3}
+      propertyPath: dragForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746213599166211523, guid: 8b71773a6572ee14db072f4c1963ea04, type: 3}
+      propertyPath: grabDistance
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4313330616077320532, guid: 8b71773a6572ee14db072f4c1963ea04, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1549,6 +1562,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2452114282488599409, guid: c1382216adb01334b9fb7ad033c00391, type: 3}
   m_PrefabInstance: {fileID: 338625879}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &338625885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9298297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: 030eb3b2976154e4b8d9831ac2358ce9, type: 2}
+--- !u!114 &338625886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9298297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
 --- !u!1 &357858438
 GameObject:
   m_ObjectHideFlags: 0
