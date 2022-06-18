@@ -14,6 +14,6 @@ public class MultiplyInput : MonoBehaviour
     }
     private void Check(int x)
     {
-        GetComponent<Collider>().enabled = x >= requiredTriggers;
+        GetComponent<Collider2D>().enabled = x >= requiredTriggers;
     }
 }
