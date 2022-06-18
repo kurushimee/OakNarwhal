@@ -62,7 +62,7 @@ public class PlayerInput : MonoBehaviour
 
         if (!canMove) return;
         _lastMoveDir = moveDir;
-        transform.position += moveDir * distance;
+        _rb.MovePosition(transform.position + moveDir * distance);
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -73,7 +73,7 @@ public class PlayerInput : MonoBehaviour
     public void OnDash(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-        const float dashDistance = 3f;
+        const float dashDistance = 2f;
         TryMove(_lastMoveDir, dashDistance);
     }
 }
