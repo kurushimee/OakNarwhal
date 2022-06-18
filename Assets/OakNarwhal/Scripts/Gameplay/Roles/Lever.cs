@@ -2,22 +2,18 @@ using UnityEngine.Events;
 
 public class Lever : Interactable
 {
-    public UnityEvent OnActivate;
-    public UnityEvent OnDectivate;
+    public UnityEvent onActivate;
+    public UnityEvent onDeactivate;
 
-    private bool _activated = false;
+    private bool _activated;
 
     public override void Interact()
     {
         _activated = !_activated;
 
-        if(_activated)
-        {
-            OnActivate.Invoke();
-        }
+        if (_activated)
+            onActivate.Invoke();
         else
-        {
-            OnDectivate.Invoke();
-        }
+            onDeactivate.Invoke();
     }
 }

@@ -19,6 +19,13 @@ public class SceneTransitor : MonoBehaviour
         OnSceneLoad?.Invoke();
     }
 
-    public void Lock() => unlocked = false;
-    public void Unlock() => unlocked = true;
+    public void Lock()
+    {
+        unlocked = false;
+    }
+
+    public void Unlock()
+    {
+        unlocked = true;
+    }
 }

@@ -3,47 +3,36 @@ using UnityEngine.InputSystem;
 
 public class PlayerDragging : MonoBehaviour
 {
-    [SerializeField] private float _grabDistance = 1f;
-    [SerializeField] private float _dragForce = 1f;
+    [SerializeField] private float grabDistance = 1f;
+    [SerializeField] private float dragForce = 1f;
 
-    private SpringJoint2D _connection = null;
+    private SpringJoint2D _connection;
 
     public void HandleInput(InputAction.CallbackContext context)
     {
-        if (context.performed)
-        {
-            if (_connection)
-            {
-                Release();
-            }
-            else
-            {
-                TryToGrab();
-            }
-        }
+        if (!context.performed) return;
+        if (_connection)
+            Release();
+        else
+            TryToGrab();
     }
 
     private void TryToGrab()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up * _grabDistance, 1f);
-        if (hit && hit.rigidbody)
-        {
-            Grab(hit.rigidbody);
-        }
+        var mTransform = transform;
+        var hit = Physics2D.Raycast(mTransform.position, mTransform.up * grabDistance, 1f);
+        if (hit && hit.rigidbody) Grab(hit.rigidbody);
     }
 
-    public void Release()
+    private void Release()
     {
-        if(_connection)
-        {
-            Destroy(_connection);
-        }
+        if (_connection) Destroy(_connection);
     }
 
     private void Grab(Rigidbody2D body)
     {
         _connection = gameObject.AddComponent<SpringJoint2D>();
         _connection.connectedBody = body;
-        _connection.frequency = _dragForce;
+        _connection.frequency = dragForce;
     }
 }

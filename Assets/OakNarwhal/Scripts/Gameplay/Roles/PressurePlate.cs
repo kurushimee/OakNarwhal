@@ -1,31 +1,23 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PressurePlate: MonoBehaviour
+public class PressurePlate : MonoBehaviour
 {
-    public UnityEvent OnActivate;
-    public UnityEvent OnDectivate;
+    public UnityEvent onActivate;
+    public UnityEvent onDeactivate;
 
-    private int _contacts = 0;
+    private int _contacts;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.attachedRigidbody)
-        {
-            _contacts++;
-            if (_contacts <= 1)
-            {
-                OnActivate.Invoke();
-            }
-        }
+        if (!collision.attachedRigidbody) return;
+        _contacts++;
+        if (_contacts <= 1) onActivate.Invoke();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         _contacts--;
-        if(_contacts < 1)
-        {
-            OnDectivate.Invoke();
-        }
+        if (_contacts < 1) onDeactivate.Invoke();
     }
 }

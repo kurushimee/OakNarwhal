@@ -1,28 +1,28 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class ItemDrawer : MonoBehaviour
 {
-    [SerializeField] private Image _iconDisplay;
-    [SerializeField] private TMP_Text _nameDisplay;
-    [SerializeField] private TMP_Text _descriptionDisplay;
-
-    public void DrawHandItem()
-    {
-        InventoryItem item = PlayerInventory.GetItemInHand();
-        DrawItem(item);
-    }
-
-    public void DrawItem(InventoryItem item)
-    {
-        _iconDisplay.sprite = item.GetSprite();
-        _nameDisplay.text = item.GetName();
-        _descriptionDisplay.text = item.GetDescription();
-    }
+    [SerializeField] private Image iconDisplay;
+    [SerializeField] private TMP_Text nameDisplay;
+    [SerializeField] private TMP_Text descriptionDisplay;
 
     private void Awake()
     {
         PlayerInventory.OnHandItemChanged += DrawHandItem;
+    }
+
+    private void DrawHandItem()
+    {
+        var item = PlayerInventory.GetItemInHand();
+        DrawItem(item);
+    }
+
+    private void DrawItem(InventoryItem item)
+    {
+        iconDisplay.sprite = item.GetSprite();
+        nameDisplay.text = item.GetName();
+        descriptionDisplay.text = item.GetDescription();
     }
 }

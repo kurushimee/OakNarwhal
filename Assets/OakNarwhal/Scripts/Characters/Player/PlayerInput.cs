@@ -3,7 +3,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerInput : MonoBehaviour
 {
-    private float _speedMultiplier = 1f;
     private const float MoveSpeed = 5f;
     private static readonly int Horizontal = Animator.StringToHash("Horizontal");
     private static readonly int Vertical = Animator.StringToHash("Vertical");
@@ -12,11 +11,7 @@ public class PlayerInput : MonoBehaviour
     private Vector3 _lastMoveDir;
     private Vector2 _movement;
     private Rigidbody2D _rb;
-
-    public void SetSpeedMultiplier(float newMultiplier)
-    {
-        _speedMultiplier = newMultiplier;
-    }
+    private float _speedMultiplier = 1f;
 
     private void Start()
     {
@@ -33,8 +28,13 @@ public class PlayerInput : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rb.velocity = _movement * MoveSpeed * _speedMultiplier;
+        _rb.velocity = _movement * (MoveSpeed * _speedMultiplier);
         _lastMoveDir = _movement.normalized;
+    }
+
+    public void SetSpeedMultiplier(float newMultiplier)
+    {
+        _speedMultiplier = newMultiplier;
     }
 
     private bool CanMove(Vector3 dir, float distance)
