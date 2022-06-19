@@ -6,27 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/OakNarwhal/Scenes/House.unity
+    path: Assets/OakNarwhal/_Scenes/House.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/OakNarwhal/Scenes/Frontyard.unity
+    path: Assets/OakNarwhal/_Scenes/Frontyard.unity
     guid: 120d6570c81f8f44584ef43ba97735ea
   - enabled: 1
-    path: Assets/OakNarwhal/Scenes/Backyard.unity
+    path: Assets/OakNarwhal/_Scenes/Backyard.unity
     guid: d571fb4b320afbb4eba997faf640707b
   - enabled: 1
-    path: Assets/OakNarwhal/Scenes/Forest.unity
+    path: Assets/OakNarwhal/_Scenes/Forest.unity
     guid: c5337432e2330e747ad2ac4d761df2af
   - enabled: 1
-    path: Assets/OakNarwhal/Scenes/Sawmill.unity
+    path: Assets/OakNarwhal/_Scenes/Sawmill.unity
     guid: d73997a509ddace47a8dd81f6fc0e941
   - enabled: 1
-    path: Assets/OakNarwhal/Scenes/Roof.unity
+    path: Assets/OakNarwhal/_Scenes/Roof.unity
     guid: d6fb90c81478d274ba51ac578bb0edfb
   - enabled: 1
-    path: Assets/OakNarwhal/Scenes/Floor_0.unity
+    path: Assets/OakNarwhal/_Scenes/Floor_0.unity
     guid: 1b5b5fb2e3131d5478f8a1b3c81c9fa7
   - enabled: 1
-    path: Assets/OakNarwhal/Scenes/Floor_1.unity
+    path: Assets/OakNarwhal/_Scenes/Floor_1.unity
     guid: adc9a5d9b2965c143be8cc05acb81cf7
   m_configObjects: {}

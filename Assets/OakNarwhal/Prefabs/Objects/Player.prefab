@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4313330616077320532}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &409695171
 MonoBehaviour:
@@ -143,7 +143,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4313330616077320532}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &519420031
 Camera:
@@ -172,7 +172,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6.7083335
+  orthographic size: 5.9583335
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -252,37 +252,6 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
---- !u!1 &4166713534804957326
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8707107772274059254}
-  m_Layer: 0
-  m_Name: Eyes
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8707107772274059254
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4166713534804957326}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4313330616077320532}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4313330616077320552
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +269,6 @@ GameObject:
   - component: {fileID: 4313330616077320555}
   - component: {fileID: 4313330616077320535}
   - component: {fileID: 6106003933620714878}
-  - component: {fileID: 420383703}
   - component: {fileID: 2746213599166211523}
   - component: {fileID: 1876943537}
   - component: {fileID: 1876943536}
@@ -323,7 +291,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8707107772274059254}
   - {fileID: 519420032}
   - {fileID: 409695170}
   m_Father: {fileID: 0}
@@ -587,7 +554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionDistance: 2
-  mTransform: {fileID: 8707107772274059254}
+  mTransform: {fileID: 0}
 --- !u!114 &6106003933620714878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -602,18 +569,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 0}
   slotsCount: 1
---- !u!114 &420383703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4313330616077320552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3eeaf781b2549a04e9d18a36f7aac500, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2746213599166211523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,8 +581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811b35913a0d4ec4b886ab20e45756dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabDistance: 1
-  dragForce: 1
+  grabDistance: 0.4
+  dragForce: 10
 --- !u!114 &1876943537
 MonoBehaviour:
   m_ObjectHideFlags: 0
