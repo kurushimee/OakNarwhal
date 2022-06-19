@@ -831,10 +831,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 519420031, guid: 8b71773a6572ee14db072f4c1963ea04, type: 3}
-      propertyPath: orthographic size
-      value: 6.7291665
-      objectReference: {fileID: 0}
     - target: {fileID: 4313330616077320532, guid: 8b71773a6572ee14db072f4c1963ea04, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -883,8 +879,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6106003933620714878, guid: 8b71773a6572ee14db072f4c1963ea04, type: 3}
-      propertyPath: inventoryUI
+    - target: {fileID: 4912368491055451392, guid: 8b71773a6572ee14db072f4c1963ea04, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
